@@ -10,37 +10,42 @@ function toggle() {
   const jsHidden = document.querySelectorAll('.js-hidden-lang, .js-hidden');
   const allLang =  document.querySelectorAll('.close__data-lang')
    
-  /** new realization */
-  const cardContainer = document.querySelector('.icons__card');
-
-  cardContainer.addEventListener('click', handleClick);
-
-  // event delegation
-  function handleClick(event) {
-    let card = event.target.closest(searchAttributName);
-
-    if (!card) return;
-
-    if (!cardContainer.contains(card)) {
-      return;
-    }
-
-    console.log('new click');
-
-    // hide all cards
-    containerElements.forEach(function(val) {
-      val.classList.remove(activeClass);
-    })
-
-    console.log(card);
-    // show card
+  /** new realization */ 
+  const cardContainer = document.querySelector('.icons__card'); 
+  cardContainer.addEventListener('click', handleClick); 
+  
+  // event delegation 
+  function handleClick(event) { 
+    let card = event.target.closest(searchAttributName); 
     
-    if (card.classList.contains('icon__card_wrap-2')) {
-      card.classList.toggle(activeClass);
+    if (!card) return; 
+    if (!cardContainer.contains(card)) { 
+      return; 
+    } 
+
+    let currentCardClass;
+    if (card.classList.contains('icon__card_wrap-1')) {
+      currentCardClass = 'icon__card_wrap-1';
+    } else if (card.classList.contains('icon__card_wrap-2')) {
+      currentCardClass = 'icon__card_wrap-2';
+    } else if (card.classList.contains('icon__card_wrap-3')) {
+      currentCardClass = 'icon__card_wrap-3';
+    } else if (card.classList.contains('icon__card_wrap-4')) {
+      currentCardClass = 'icon__card_wrap-4';
     }
     
-  }
-  /** end new realization */ 
+    // hide another cards 
+    containerElements.forEach(function(val) { 
+      if (!val.classList.contains(currentCardClass)) {
+        val.classList.remove(activeClass);
+      }
+    });
+
+    // toggle card 
+    card.classList.toggle(activeClass); 
+
+  } 
+  /** end new realization */
   
   // containerElements.forEach((element) => {
   //   element.addEventListener("click", handleClickToggle); //по клику на наш массив элементов в которых есть [data-toggle]
