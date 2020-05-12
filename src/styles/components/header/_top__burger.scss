@@ -1,0 +1,46 @@
+.top__burger{
+  display: none;
+  position: relative;
+  outline: 0;
+  border: 0;
+  padding: 27px 18px;
+  background: 0 0;
+  cursor: pointer;
+}
+.top__burger_build {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 2px;
+  border-radius: 1px;
+  background: #c4d600;
+  transition: background-color 300ms;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c4d600;
+    transition: transform 0.3s, top 0.3s, background-color 0.3s;
+    top: -7px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c4d600;
+    transition: transform 0.3s, top 0.3s, background-color 0.3s;
+    top: 7px;
+  }
+}
+@media(max-width: 800px){
+  .container{
+    max-width: 800px;
+  }
+  .top__burger{
+    display: block;
+  }
+}

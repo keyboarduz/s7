@@ -1,0 +1,43 @@
+{
+  "name": "air-line",
+  "version": "1.0.0",
+  "description": "responsive website",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
+    "prettier": "prettier --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rama225/air-line.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rama225/air-line/issues"
+  },
+  "homepage": "https://github.com/Rama225/air-line#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.4.2",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.0.4",
+    "node-sass": "^4.13.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.4",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "url-loader": "^4.0.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  }
+}

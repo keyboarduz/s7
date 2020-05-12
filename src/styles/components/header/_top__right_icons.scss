@@ -1,0 +1,44 @@
+.icons__card{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 15px;
+}
+.icon__card_wrap-1{
+  display: flex;
+  align-items: center;
+}
+.icon__card_wrap-2{
+  display: flex;
+  align-items: center;
+  height: 30px;
+  border-right: 1px solid $lighten-br;
+  border-left: 1px solid $lighten-br;
+  cursor: pointer;
+}
+.icon__card_wrap-4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid $lighten-br;
+  padding-left: 16px;
+  height: 30px;
+}
+
+.icon__card_wrap-4 a{
+  color: rgba(0,0,0,0.87);
+}
+.top__right_icons{
+  flex-basis: 263px;
+  
+}
+.logo-oneworld__icon{
+  display: block;
+    width: 32px;
+    height: 32px;
+    // background-image: url("https://static.s7cdn.online/images/icons-svg/Oneworld_logo.svg");
+} 
+.icon-card-wrap__logo-oneworld{
+  display: none;
+}

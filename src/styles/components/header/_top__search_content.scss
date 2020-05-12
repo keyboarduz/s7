@@ -1,0 +1,108 @@
+.search-form__logo{
+  width: 32px;
+  height: 32px;
+  margin-right: -15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1024' height='1024' fill='%23c4d600'%3E%3Cpath d='M736.531 689.775l132.583 132.583c19.995 19.995 19.995 52.413 0 72.408s-52.413 19.995-72.408 0l-136.27-136.27C603.383 796.832 534.704 819.2 460.8 819.2c-197.939 0-358.4-160.461-358.4-358.4s160.461-358.4 358.4-358.4c197.939 0 358.4 160.461 358.4 358.4 0 87.065-31.045 166.879-82.669 228.975zM460.8 716.8c141.385 0 256-114.615 256-256s-114.615-256-256-256-256 114.615-256 256 114.615 256 256 256z'/%3E%3C/svg%3E");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+._active-toggle .search__content {
+  display: block;
+
+}
+.search__content{
+  display: none;
+  z-index: 99;
+  box-shadow: none;
+  left: 180px;
+  top: 0;
+  width: auto;
+  height: 88px;
+  margin: 0;
+  right: 234px;
+  position: absolute;
+  background-color: white;
+}
+
+.search-form{
+  width: 100%;
+  height: 100%;
+}
+.search-form__form{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding-left: 20px;
+  font-size: 20px;
+  outline: none;
+}
+.search__content_close{
+  display: block;
+  position: absolute;
+  z-index: 1;
+  right: 3px;
+  top: 50%;
+  height: 57px;
+  width: 23px;
+  margin-top: -28px;
+  padding: 18px 5px;
+  cursor: pointer;
+}
+.search__content_close::before{
+  content: '';
+  position: absolute;
+  height: 16px;
+  border-radius: 4px;
+  width: 2px;
+  background-color: $main-color;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg)
+}
+.search__content_close::after{
+  content: '';
+  position: absolute;
+  height: 16px;
+  border-radius: 4px;
+  width: 2px;
+  background-color: $main-color;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg)
+}
+.search-form__dropdown{
+  padding: 22px;
+  background: #fff;
+}
+.search-form__popular{
+  padding-bottom: 16px;
+  line-height: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  color: $font-size_color_54;
+  cursor: text;
+}
+.search-form__item{
+  padding: 9px 0 30px;
+}
+.search-form__link{
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 17px;
+  font-size: 14px;
+  font-weight: 700;
+  color: $font-size_color_87;
+}
+
+@media(max-width: 800px){
+  .container{
+    max-width: 800px;
+  }
+  .search__content-wrapper{
+    display: none;
+  }
+}
+

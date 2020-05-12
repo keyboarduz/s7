@@ -1,0 +1,23 @@
+.top__menu_menu ul{
+  display: flex;
+  justify-content: space-between;
+  line-height: 24px;
+  font-weight: 400;
+  a{
+    color: rgba(0,0,0,0.87);
+    
+  }
+  li a:hover{
+    color: $lighten;
+  }
+
+}
+.top__menu {
+  flex-basis: 76%;
+  a{
+    letter-spacing: -0.45px;
+  }
+}
+.top__menu-active{
+  border-bottom: 2px solid $main-color;
+}
