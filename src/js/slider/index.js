@@ -8,7 +8,7 @@ function slider(){
    * @see https://glidejs.com/docs
    */
   new Glide('.glide', {
-    type: 'slider',
+    type: 'carousel',
     startAt: 0,
     perView: 1,
     autoplay: 3000, // <--- setInterval per millisecond
