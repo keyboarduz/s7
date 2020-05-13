@@ -13,6 +13,7 @@ function toggle() {
   /** new realization */ 
   const cardContainer = document.querySelector('.icons__card'); 
   cardContainer.addEventListener('click', handleClick); 
+  document.addEventListener('click', closeAllCards);
   
   // event delegation 
   function handleClick(event) { 
@@ -41,10 +42,57 @@ function toggle() {
       }
     });
 
-    // toggle card 
-    card.classList.toggle(activeClass); 
+    // clicked search wrapper
+    if (currentCardClass === 'icon__card_wrap-1') {
+      if (event.target.closest('[data-attr="search__content_open"]')) {
+        card.classList.add(activeClass);
+      }
 
+      if (event.target.closest('[data-attr="search__content_close"]')) {
+        card.classList.remove(activeClass);
+      }
+    }
+    // clicked lang wrapper 
+    else if (currentCardClass === 'icon__card_wrap-2') {
+      if (event.target.classList.contains('language-toggle__icon') && event.target.classList.contains('js-container-lang')) {
+        card.classList.toggle(activeClass);
+      }
+
+      if (event.target.closest('.close__data-lang') || event.target.classList.contains('js-hidden-lang') || event.target.classList.contains('js-hidden-lang')) {
+        card.classList.remove(activeClass);
+      }
+    }
+    // clicked currency wrapper
+    else if (currentCardClass === 'icon__card_wrap-3') {
+      if (event.target.classList.contains('active__collaps')) {
+        card.classList.toggle(activeClass);
+      }
+
+      if (event.target.closest('[data-attr="li-collaps"]') || event.target.classList.contains('js-hidden-lang') || event.target.dataset.attr === 'li-collaps') {
+        card.classList.remove(activeClass);
+      }
+    }
+    // clicked form
+    else if (currentCardClass === 'icon__card_wrap-4') {
+      if (event.target.classList.contains('active__form')) {
+        card.classList.toggle(activeClass);
+      }
+
+      if (event.target.classList.contains('login-form__close') || (event.target.classList.contains('login-form__inter') && event.target.classList.contains('js-hidden'))) {
+        card.classList.remove(activeClass);
+      }
+    }
   } 
+
+  // close all cards
+  function closeAllCards(event) {
+    if (event.target.closest(searchAttributName)) {
+      return;
+    }
+    containerElements.forEach((card) => {
+      card.classList.remove(activeClass);
+    });
+  }
   /** end new realization */
   
   // containerElements.forEach((element) => {
