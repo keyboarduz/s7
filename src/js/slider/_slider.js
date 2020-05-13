@@ -13,8 +13,8 @@ function MySlider(){
   }, 5000);
 
   
-  function btnClick(isInterval){
-    if(isInterval || this.dataset.attribute === 'next'){
+  function btnClick(e){
+    if(e === true || this.dataset.attribute === 'next'){
       dots.forEach((element) => {element.classList.remove('slider__dot_active')});
       images.forEach((element) => {element.classList.remove('slider__slide_active')});
       if(active + 1 === images.length){
@@ -27,9 +27,7 @@ function MySlider(){
       }
       images[active].classList.add('slider__slide_active')
       dots[active].classList.add('slider__dot_active') 
-    }
-
-    else if(this.dataset.attribute === 'prev'){
+    } else if(this.dataset.attribute === 'prev'){
       dots.forEach((element) => {element.classList.remove('slider__dot_active')});
       images.forEach((element) => {element.classList.remove('slider__slide_active')});
       if(active - 1 === -1){
